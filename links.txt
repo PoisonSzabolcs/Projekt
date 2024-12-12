@@ -1,0 +1,3 @@
+Minta:
+https://tailwindui.com/templates/spotlight
+https://syntax.tailwindui.com
