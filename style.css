@@ -2,5 +2,201 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
+
 }
+
+
+
+.bty{
+    z-index: 1;
+    position: relative;
+
+
+    background-color: beige;
+}
+
+#menu
+{
+    
+    height: 45px;
+    max-height: 45px;
+    line-height: 35px;
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;  
+    text-align: center;
+    border-radius: 120px;
+    cursor: pointer;
+    user-select: none;
+    position: sticky;
+    top: 0;
+  
+}
+
+#menu ul
+{
+   
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 5px solid black;
+    background-color: crimson;
+    color: black;
+    list-style-type: none;
+    display:inline-flex;
+    top: 12px;
+}
+
+
+#menu li
+{
+   
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#menu li:hover
+{
+   
+    color: aqua;
+}
+
+#ThemeButton
+{
+        
+    position: relative;
+    top: -60px;
+    left: 1175px;
+    
+}
+
+.tartalom {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.btn{
+   
+  position: absolute;
+  top: 20px;
+  left: 1150px;
+
+
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: rgba(100, 116, 139, 0.377);
+  transition: all .3s ease;
+}
+
+.btn:checked {
+  background-color: rgba(77, 175, 80, 1);
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  left: calc(1.5rem - 1.6rem);
+  top: calc(1.5rem - 1.6rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  border: 1px solid rgba(100, 116, 139, 0.527);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch:hover::before {
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+
+.switch:checked:hover::before {
+  box-shadow: 0 0 0px 8px rgba(77, 175, 80, .15)
+}
+
+input[type="checkbox"]:checked:before {
+   
+    transform: translateX(1.5em);
+      
+  border-color: rgba(77, 175, 80, 1);
+}
+
+ input[type="checkbox"]:checked ~ .bdy{
+    text-decoration: none;
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+  #menu {
+    
+    color: whitesmoke;
+    height: 45px;
+    max-height: 45px;
+    line-height: 35px;
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 120px;
+    cursor: pointer;
+    user-select: none;
+    position: sticky;
+    top: 0;
+  }
+
+  #menu ul
+{
+    margin-top: 10px;
+    border: 5px solid crimson;
+    background-color: white;
+    border-radius: 20px;
+    color: goldenrod;
+    list-style-type: none;
+    display:inline-flex;
+    top: 12px;
+}
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
