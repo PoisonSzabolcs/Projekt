@@ -6,6 +6,25 @@ switch for menu:
 https://uiverse.io/vinodjangid07/soft-octopus-29
 
 
+Fehér árnyalatok:
+Tiszta fehér: #FFFFFF
+Nagyon halvány törtfehér: #F5F5F5
+Halvány elefántcsont: #FAFAFA
+Hófehér: #FFF8F0
+Gyöngyfehér: #FDFDFD
+
+
+
+Szürke árnyalatok:
+Világos szürke: #E0E0E0
+Halvány szürke: #CCCCCC
+Közepes szürke: #A6A6A6
+Sötét szürke: #808080
+Nagyon sötét szürke: #4D4D4D
+Grafitszürke: #333333
+Majdnem fekete: #1A1A1A
+
+
 
 
 
