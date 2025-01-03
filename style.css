@@ -1,1053 +1,1204 @@
-/*
-Szabival dolgozni egy élmény.
-*/
+  /*
+  Szabival dolgozni egy élmény.
+  */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
+    
+
+  }
+
+  @font-face {
+    font-family: sajatH1;
+    src: url('./fonts/Oswald-VariableFont_wght.ttf');
+  }
+
+  @font-face {
+    font-family: sajatp;
+    src: url('./fonts/Raleway-VariableFont_wght.ttf');
+  }
+
+
+  .bdy
+  {
+    margin: 0 340px;
+    background-color: gray;
+    overflow: hidden;
+
+  }
+
+  #menu{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 30px;
+    width: max-content;
+    border: 2px solid #A6A6A6;
+    background-color: #FAFAFA;
+
+  }
+
+  #menu ul
+  {
+    list-style-type: none;
+    display: inline-flex;
+
+    
+  }
+
+  #menu li
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #menu li:first-child
+  {
+    padding-left: 20px;
+    
+  }
+
+  #menu li:last-child
+  {
+    padding-right: 20px;
+  }
+
+
+  #menu li:hover,
+  a:hover {
+    color: rgba(9, 117, 241, 0.8);
+    text-shadow: 10px 0 20px rgba(9, 117, 241, 0.8);
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* Gta6 Loading Screen pp */
+
+  #pp  img
+  {
+    position: absolute;
+    top: 20px;
+    left:  500px;
+    width: 70px;
+  height: 70px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  #pp a
+  {
+    width: 100px;
+    padding: 10px;
+  }
+
+
+  /*Just cars*/
+
+  .cars
+  {
+    padding-top: 10px;
+    text-align: start;
+    max-height: auto;
+    max-width: 100%;
+    user-select: none;
+    
+    text-decoration: none;
   
-
-}
-
-@font-face {
-  font-family: sajatH1;
-  src: url('./fonts/Oswald-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: sajatp;
-  src: url('./fonts/Raleway-VariableFont_wght.ttf');
-}
+  }
 
 
-.bdy
-{
-  margin: 0 340px;
-  background-color: gray;
-  overflow: hidden;
+  .szovegcard
+  {
+    border-left: 2px solid #1A1A1A; 
+    padding: 0 24px;
+    width: fit-content;
+  }
+  .carsSzoveg
+  {
+    
+      height: auto;
+      width: fit-content;
+      border-radius: 12px;
+      padding: 10px;
+    
+  }
+  .cars
+  {
+    position: relative;
+    left: 230px;
+    max-width: 720px;
+    bottom: 35px;
+  }
+  /* menu alatt hiih*/
 
-}
+  .imga {
+    margin-top: 20px;
+    float: right;
+    width: 400px;
+    height: 410px;
 
-#menu{
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 42px;
-  line-height: 42px;
-  border-radius: 30px;
-  width: max-content;
-  border: 2px solid #A6A6A6;
-  background-color: #FAFAFA;
+    transform: rotate(3deg);
+    border-radius: 3%;
+  }
 
-}
 
-#menu ul
-{
-  list-style-type: none;
-  display: inline-flex;
+  .tartalom>*:not(:last-child) {
+    padding: 0 64px;
+  }
 
+  .tartalom
+  {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    
+  }
+
+
+
+  #szoveg
+  {
+    height: 1000px;
+    flex: 1;
+    width: 520px;
+    overflow: hidden;
+  }
+
+  #szoveg h1 {
+    font-family: sajatH1;
+    font-size: 48px;
+
+  }
+
+  #szoveg p {
+
+    font-family: sajatp;
+    font-size: 16px;
+    line-height: 25px;
   
-}
+  }
+  #test
+  {
+    margin-top: 24px;
+  }
+  #test p:not(:first-child) {
 
-#menu li
-{
-  padding-left: 10px;
-  padding-right: 10px;
-}
+    margin-top: 28px;
+  }
 
-#menu li:first-child
-{
-  padding-left: 20px;
+  /*Maincard2.0 öccse kész vagyok */
+  #MainCard2
+  {
+    
+    display: flex;
+    flex-direction: column;
+    grid-column: 4rem;
+    gap: 4rem;
+    padding-left: 30px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+  }
+
+  #MainCard2 a
+  {
+    height: auto;
+  }
+
+  #conferences
+  {
+  border-left: 2px solid #1A1A1A;
+  padding-left: 24px;
+  }
+
+  #podcast
+  {
+    height: 1200px;
+    margin-top: 64px;
+    border-left: 2px solid #1A1A1A;
+    padding-left: 24px;
+  }
+
+  .sysconf 
+  {
+  color: #808080;
+  border-left: 4px solid #A6A6A6;
+  padding-left: 12px;
+  margin-bottom: 10px;
+  }
+
+  .listen 
+  {
+  color: #A6A6A6;
+  font-weight: bold;
+  margin-top: 20px;
+  }
+
+  .tavolitsztqv
+  {
+    margin-bottom: 5px;
+  }
+
+  #MainCard2 a
+  {
+    position: relative;
+    left: 230px;
+    max-width: 570px;
+    bottom: 35px;
+  }
+
+  /*Lista Oh ne már btw semmi nem müködik hajnali 3óra 48perc dec. 27-e van, fáj a fejem, shit*/
+
+  #elerhet {
+    display: flex;
+    width: max-content;
+    top: initial;
+
+  }
+
+  #elerhet ul {
+    
+
+    list-style-type: none;
+    width: max-content;
+    text-align: start;
+    margin: 2px;
+    padding: 1px;
+    position: absolute;
+    top: 650px;
+    right: 400px;
+  }
+
+
+
+  #elerhet a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #elerhet li:hover a {
+    color: #00aaff;
+    transition: all .3s ease;
+  }
+
+  #elerhet li:hover img {
+    filter: grayscale(0) brightness(1) contrast(100%);
+  }
+
+  #elerhet ul hr {
+    margin: 32px 0;
+    width: 400px;
+  }
+
+
+
+  .X img {
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    filter: grayscale(100%) brightness(0) contrast(1000%);
+    transition: all .3s ease;
+    margin-right: 10px;
+  }
+
+
+  .X {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  /* wohooo az oldal alja jön*/
+
+
+  #webbot {
+    display: inline-flex;
+    padding: 40px 48px 64px;
+    border-top: 1px solid black;
+    top: 500px;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  #webbot ul {
+
+    list-style-type: none;
+    display: inline-flex;
+
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.5rem;
+
+
+  }
+
+
+  /*Webprogramozás = szenvedés woohooo O_o
+    efelejtettem szöveget formázni shit
+  */
+
+
+  /* Gomb */
+
+  .btn {
+    z-index: 1000;
+    position: absolute;
+    top: 20px;
+    left: 1320px;
+    height: 1.5rem;
+    width: 3rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    border: #1A1A1A 1px solid;
+    background-color: rgba(100, 116, 139, 0);
+    transition: all .3s ease;
+  }
+
+
+  .btn::before {
+    position: absolute;
+    content: "";
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .switch:hover::before {
+    box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+  }
+
+  .switch:checked:hover::before {
+    box-shadow: 0 0 0px 8px rgba(77, 175, 80, .15)
+  }
+
+  input[type="checkbox"]:checked:before {
+
+    transform: translateX(2em);
+
+
+  }
+
+
+
+
+  /*Második weboldal, na én kezdek valamit a jugoszláviával 
+    Ui.: ilyenkor jön a kérdés, hogy miért nem alszol? <- az ai beszól wtf xDD
+    
+  O_o*/
+
+
+  #rt
+  {
+    margin-left: 48px;
+    margin-right: 48px;
+    width: auto;
+  }
+  #rt:not(:last-child)
+  {
+    width: auto;
+  } 
+  #artp
+  {
+    margin-top: 24px;
+  }
+
+  #MainCard
+  {
   
-}
-
-#menu li:last-child
-{
-  padding-right: 20px;
-}
-
-
-#menu li:hover,
-a:hover {
-  color: rgba(9, 117, 241, 0.8);
-  text-shadow: 10px 0 20px rgba(9, 117, 241, 0.8);
-
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Gta6 Loading Screen pp */
-
-#pp  img
-{
-  width: 70px;
- height: 70px;
-  padding: 10px;
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-#pp a
-{
-  width: 100px;
-  padding: 10px;
-}
+    display: flex;
+    flex-direction: column;
+    grid-column: 4rem;
+    border-left: #1A1A1A 1px solid;
+    padding-left: 30px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
 
 
-/*Just cars*/
 
-.cars
-{
-  padding-top: 10px;
-  text-align: start;
-  max-height: 180px;
-  max-width: 700px;
-  user-select: none;
-  
-  text-decoration: none;
- 
-}
-.carsSzoveg
-{
-  
+
+  .cards0 a:hover {
+    text-shadow: none;
+    color: inherit;
+
+  }
+  .cards0:not(:first-child)
+  {
+    margin-top: 64px;
+  }
+
+  .cards0 p:not(.cardSzoveg p)
+  {
+    margin-top: 10px;
+    width: fit-content;
+    
+  }
+
+  .cards0 {
+    padding-top: 10px;
+    text-align: start;
+    max-height: 180px;
+    max-width: 700px;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .cardSzoveg0{ 
     height: 200px;
     width: inherit;
     border-radius: 12px;
     padding: 10px;
-  
-}
 
-.szovegcard
-{
-  border-left: 2px solid #1A1A1A; 
-  padding: 0 24px;
-}
-.cars
-{
-  position: relative;
-  left: 230px;
-  max-width: 570px;
-  bottom: 35px;
-}
-/* menu alatt hiih*/
-
-.imga {
-  margin-top: 20px;
-  float: right;
-  width: 400px;
-  height: 410px;
-
-  transform: rotate(3deg);
-  border-radius: 3%;
-}
-
-
-.tartalom>*:not(:last-child) {
-  padding: 0 64px;
-}
-
-.tartalom
-{
-  padding-top: 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: auto;
-  
-}
-
-
-
-#szoveg
-{
-  height: 1000px;
-  flex: 1;
-  width: 520px;
-  overflow: hidden;
-}
-
-#szoveg h1 {
-  font-family: sajatH1;
-  font-size: 48px;
-
-}
-
-#szoveg p {
-
-  font-family: sajatp;
-  font-size: 16px;
-  line-height: 25px;
- 
-}
-#test
-{
-  margin-top: 24px;
-}
-#test p:not(:first-child) {
-
-  margin-top: 28px;
-}
-
-/*Maincard2.0 öccse kész vagyok */
- #MainCard2
- {
-   
-  display: flex;
-  flex-direction: column;
-  grid-column: 4rem;
-  gap: 5rem;
-  padding-left: 30px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-
- }
-
-#MainCard2 a
-{
-  height: auto;
-}
-
-#conferences
-{
- border-left: 2px solid #1A1A1A;
- padding-left: 24px;
-}
-
-#podcast
-{
-  height: 1200px;
-  margin-top: 64px;
-  border-left: 2px solid #1A1A1A;
-  padding-left: 24px;
-}
-
-.sysconf 
-{
-color: #808080;
-border-left: 4px solid #A6A6A6;
-padding-left: 12px;
-margin-bottom: 10px;
-}
-
-.listen 
-{
-color: #A6A6A6;
-font-weight: bold;
-margin-top: 20px;
-}
-
-.tavolitsztqv
-{
-  margin-bottom: 5px;
-}
-
-#MainCard2 a
-{
-  position: relative;
-  left: 230px;
-  max-width: 570px;
-  bottom: 35px;
-}
-
-/*Lista Oh ne már btw semmi nem müködik hajnali 3óra 48perc dec. 27-e van, fáj a fejem, shit*/
-
-#elerhet {
-  display: flex;
-  width: max-content;
-  top: initial;
-
-}
-
-#elerhet ul {
-  
-
-  list-style-type: none;
-  width: max-content;
-  text-align: start;
-  margin: 2px;
-  padding: 1px;
-  position: absolute;
-  top: 650px;
-  right: 400px;
-}
-
-
-
-#elerhet a {
-  text-decoration: none;
-  color: inherit;
-}
-
-#elerhet li:hover a {
-  color: #00aaff;
-  transition: all .3s ease;
-}
-
-#elerhet li:hover img {
-  filter: grayscale(0) brightness(1) contrast(100%);
-}
-
-#elerhet ul hr {
-  margin: 32px 0;
-  width: 400px;
-}
-
-
-
-.X img {
-  object-fit: contain;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: 5px;
-  filter: grayscale(100%) brightness(0) contrast(1000%);
-  transition: all .3s ease;
-  margin-right: 10px;
-}
-
-
-.X {
-  height: 40px;
-  line-height: 40px;
-}
-
-/* wohooo az oldal alja jön*/
-
-
-#webbot {
-  display: inline-flex;
-  padding: 40px 48px 64px;
-  border-top: 1px solid black;
-  top: 500px;
-  gap: 1.5rem;
-  justify-content: space-between;
-}
-
-#webbot ul {
-
-  list-style-type: none;
-  display: inline-flex;
-
-  
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1.5rem;
-
-
-}
-
-
-/*Webprogramozás = szenvedés woohooo O_o
-  efelejtettem szöveget formázni shit
-*/
-
-
-/* Gomb */
-
-.btn {
-  z-index: 1000;
-  position: absolute;
-  top: 20px;
-  left: 1320px;
-  height: 1.5rem;
-  width: 3rem;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  border-radius: 9999px;
-  border: #1A1A1A 1px solid;
-  background-color: rgba(100, 116, 139, 0);
-  transition: all .3s ease;
-}
-
-
-.btn::before {
-  position: absolute;
-  content: "";
-  left: calc(1.5rem - 1.6rem);
-  top: calc(1.5rem - 1.6rem);
-  display: block;
-  height: 1.6rem;
-  width: 1.6rem;
-  cursor: pointer;
-  border: 1px solid rgba(100, 116, 139, 0.527);
-  border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.switch:hover::before {
-  box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
-}
-
-.switch:checked:hover::before {
-  box-shadow: 0 0 0px 8px rgba(77, 175, 80, .15)
-}
-
-input[type="checkbox"]:checked:before {
-
-  transform: translateX(2em);
-
-
-}
-
-
-
-
-/*Második weboldal, na én kezdek valamit a jugoszláviával 
-  Ui.: ilyenkor jön a kérdés, hogy miért nem alszol? <- az ai beszól wtf xDD
-  
-O_o*/
-
-
-#rt
-{
-  margin-left: 48px;
-  margin-right: 48px;
-
-}
-#rt:not(:last-child)
-{
-  width: 820px;
-} 
-#artp
-{
-  margin-top: 24px;
-}
-
-#MainCard
-{
- 
-  display: flex;
-  flex-direction: column;
-  grid-column: 4rem;
-  border-left: #1A1A1A 1px solid;
-  padding-left: 30px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-}
-
-
-.cards a:hover {
-  text-shadow: none;
-  color: inherit;
-
-}
-.cards:not(:first-child)
-{
-  margin-top: 64px;
-}
-
-.cards p:not(.cardSzoveg p)
-{
-  margin-top: 10px;
-  width: fit-content;
-}
-
-.cards {
-  padding-top: 10px;
-  text-align: start;
-  max-height: 180px;
-  max-width: 700px;
-  user-select: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-
-#MainCard a
-{
-  position: relative;
-  left: 230px;
-  max-width: 570px;
-  bottom: 35px;
-}
-.cardSzoveg{ 
-  height: 200px;
-  width: inherit;
-  border-radius: 12px;
-  padding: 10px;
-}
-.cardSzoveg:hover
-{
-  background-color: rgba(255, 255, 255, 0.5);
- 
-  
-  color: #1A1A1A;
-}
-
-/* 3. oldal kártyái O_o*/
-#MainCardProjects
-{
-
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2px;
-  justify-content:baseline ;
-  margin: 0 48px;
-  padding: 0;
-  margin-bottom: 120px;
-}
-
-
-#header
-{
-  max-width: 850px;
-}
-
-.Pcards
-{
-  width: 330px;
-  height: 200px;
-  padding: 20px;
-}
-
-.Pcards p img
-{
-  width: 20px;
-  position: relative;
-  top: 0.2rem;
-  margin-right: 10px;
-  filter: grayscale(100%) brightness(0) contrast(1000%);
-  transition: all .3s ease;
-}
-.Pcards p:last-child{
-  height: 10px;
-  margin-top: 20px;
-  line-height: 10px;
-}
-.Pcards:hover p:last-child{
-  color: blue;
-}
-.Pcards:hover p img{
-  filter: grayscale(0%) brightness(100%) contrast(100%);
-
-}
-.Pcards h3
-{
-  margin-bottom: 10px;
-}
-.Pcards img:not(p img)
-{
-  width: 60px;
-  height: 60px;
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-}
-.Pcards a
-{
-  text-decoration: none;
-  color: #1A1A1A;
-  text-shadow: none;
-}
-
-.Pcards:hover
-{
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #1A1A1A;
-  border-radius: 15px;
-}
-
-/*Menu*/
-
-#checkbox {
-  display: none;
-}
-
-.toggle {
-  position: static;
-  float: right;
-  margin-right: 50px;
-  margin-top: 10px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition-duration: .5s;
-  display: none;
-}
-
-.bars {
-  width: 100%;
-  height: 4px;
-  background-color: rgb(176, 92, 255);
-  border-radius: 4px;
-  visibility: hidden;
-  
-}
-
-#bar2 {
-  transition-duration: .8s;
-}
-
-#bar1,#bar3 {
-  width: 70%;
-}
-
-#checkbox:checked + .toggle .bars {
-  position: absolute;
-  transition-duration: .5s;
-}
-
-#checkbox:checked + .toggle #bar2 {
-  transform: scaleX(0);
-  transition-duration: .5s;
-}
-
-#checkbox:checked + .toggle #bar1 {
-  width: 100%;
-  transform: rotate(45deg);
-  transition-duration: .5s;
-}
-
-#checkbox:checked + .toggle #bar3 {
-  width: 100%;
-  transform: rotate(-45deg);
-  transition-duration: .5s;
-}
-
-#checkbox:checked + .toggle {
-  transition-duration: .5s;
-  transform: rotate(180deg);
-}
-
-
-#checkbox:checked ~ .fz{
-  display: block;
-  z-index: 100;
-}
-
-
-
-
-
-
-
-.fz {
-  display: none; 
-  position: absolute;
-  top: 70px; 
-  right: 10px;
- float: right;
-  color: #1A1A1A;
-  padding: 10px;
-
-  border-radius: 20px;
-  width: 200px;
-  box-shadow: rgb(0 0 0 / 15%) 0 10px 20px 0px;
-
-}
-
-
-.menu:checked + .fz {
-  display: block;
-  z-index: 100;
-
-}
-.menu:checked ~ body {
-  filter: blur(50000px);
-
-}
-
-.fz ul {
-  list-style-type: none;
-  padding: 0;
-  z-index: 100000;
-  border: 2px solid black;
-  background-color: #FAFAFA;
- border-radius: 20px;
- padding: 5px;
-}
-.fz a
-{
-  color: #FAFAFA;
-  text-decoration: none;
-}
-
-.fz ul li {
-  padding: 10px;
-
-  z-index: 100000;
-  cursor: pointer;
-}
-.fz ul li:not(:last-child)
-{
-  border-bottom: 1px solid #444;
-}
-
-.fz ul li:not(:first-child):hover {
-  background-color: #4D4D4D;
-}
-.fz ul li:first-child:hover {
-  background-color: #4D4D4D;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.fz ul li:last-child:hover {
-  background-color: #4D4D4D;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-
-input[type="checkbox"]:checked {
-  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-  border: 1px solid #0974f1;  
-
-}
-
-input[type="checkbox"]:checked ~ .i {
-
-  border: 2px solid white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-  color: black;
-
-  
-
-}
-
-
-input[type="checkbox"]:checked ~ .fz 
-{
-  color: black;
-  box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
- 
-  border: 2px white solid;
-}
-
-input[type="checkbox"]:checked ~ .fz ul{
-  color: black;
-  background-color: #4D4D4D;
-}
-
-
-
-/* Gomb funkciók és minden más o_O alig van időőőőő*/
-
-input[type="checkbox"]:not(:checked)~.fancyBG .bdy {
-  background-color: #E8E8E8;
-
-  .imga {
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-    border: 2px black solid;
   }
-
-}
-
-input[type="checkbox"]:not(:checked)~.fancyBG {
-  background-color: #D6D6D6;
-
-}
-
-
-/* Leghatso hatter */
-input[type="checkbox"]:checked~.fancyBG {
-  background-color: black;
-
-
-}
-
-/* web hattere */
-
-input[type="checkbox"]:checked~.fancyBG .bdy {
-
-  background: linear-gradient(to left, #1A1A1A, #232323, #2C2C2C, #363636, #404040);
-  border-left: 2px solid #A6A6A6;
-  border-right: 2px solid #A6A6A6;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-  color: #FAFAFA;
-  color-scheme: light dark;
-
-  #MainCard{
-    border-left: white 1px solid;
-  }
-
-  .Pcards p, .Pcards h3
+  .cardSzoveg0:hover
   {
-    color: #FAFAFA;
-  } 
-  .Pcards p img
-  {
-    filter: grayscale(100%) brightness(1000%) contrast(0);
-    transition: all .3s ease;
-  }
-  .Pcards:hover p img{
-    filter: grayscale(0%) brightness(1) contrast(1);
+    background-color: rgba(255, 255, 255, 0.5);
   
+    
+    color: #1A1A1A;
   }
 
-  .X img {
-    filter: grayscale(100%) brightness(1000%) contrast(0);
-    transition: all .3s ease;
-  }
 
-  .imga {
-    box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
-    border: 2px white solid;
-  }
-
-  a {
-    color: #FAFAFA;
-  }
-
-  a:hover {
-    color: rgba(9, 117, 241, 0.8);
-    text-shadow: 10px 0 20px rgba(9, 117, 241, 0.8);
-  }
+  /*aaaa*/
 
   .cards a:hover {
     text-shadow: none;
     color: inherit;
 
   }
-
-  #webbot p {
-
-    color: white;
-  }
-
-  #webbot {
-    border-top: 1px solid whitesmoke;
+  .cards:not(:first-child)
+  {
+    margin-top: 64px;
   }
 
-  #menu ul {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-
-    border: 2px solid #1A1A1A;
-    background-color: #333333;
-    border-radius: 20px;
-    color: #FAFAFA;
+  .cards p:not(.cardSzoveg p)
+  {
+    margin-top: 10px;
+    width: fit-content;
   }
 
-  .Pcards a
-{
-  text-decoration: none;
-  color: #1A1A1A;
-  text-shadow: none;
-}
-
-  
-}
-
-
-
-
-@media screen and (max-width:1740px){
-  #MainCard2 a
-  {
-    position: static;
-  }
-  #conferences
-{
- border-left: none;
-
-}
-
-#podcast
-{
-  
-  border-left: none;
- 
-}
-  #elerhet ul
-  {
-    position: static;
-    width:  max-content;
-  }
-  #menu
-  {
-    visibility: hidden;
-  }
-  #kep
-  {
-    margin: auto;
-  }
-  .toggle
-  {
-    display: flex;
-  }
-  .bars
-  {
-    visibility: visible;
-  }
-  .fz
-  {
-    right: 380px;
-  }
-  .i
-  {
-    visibility: visible;
-  }
-  #elerhet
-  {
-    width: 100%;
-  }
-  #elerhet ul
-  {
-    width: 100%;
-  }
-  #elerhet ul hr
-  {
-    width: 100%;
-  }
-  .tartalom
-  {
-    gap: 5rem;
-    width: 100%;
+  .cards {
+    padding-top: 10px;
+    text-align: start;
+    max-height: 180px;
+    max-width: 700px;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
   }
 
-  #szoveg h1
-  {
-    font-size:32pt;
-  }
-  #szoveg
-  {
-    max-width: fit-content;
-    max-height: fit-content;
-  }
-  #na
-  {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-  }
-  .btn
-  {
-    left: 400px;
-  }
-  .imga
-  {
-    float: none;
-  }
-  #webbot
-  {
-    flex-direction: column;
-    text-align: center;
 
-    width: 100%;
-    align-items: center;
-  }
-
-   #webbot p
-   {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-   }
-   .cards
-   {
-    max-width: 340px;
-   }
-
-}
-
-@media screen and (max-width:1460px)
-{
-  #MainCardProjects
-  {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width:1284px)
-{
- 
-  .fz
-  {
-    right: 40px;
-  }
- .i
- {
-  left: 450px;
- }
-  #rt:not(:last-child)
-  {
-    width: 420px;
-  } 
-  #MainCard
-  {
-    border: none;
-    align-items: center;
-  }
-  #MainCard p:first-child
-  {
-    border-left: 1px solid black;
-    padding-left: 30px;
-    position: relative;
-    z-index: 20;
-  }
   #MainCard a
   {
-    position: static;
-    
-  }
-  #MainCard
-  {
-    border-left: none !important;
-    align-items: center;
-  }
-  .cards
-  {
-    
-   max-width: 340px;
-
-   position: static;
-  }
-  .cardSzoveg
-  {
-    height: max-content;
-    padding-top: 30px;
     position: relative;
-    bottom: 25PX;
-    right: 10px;
+    left: 230px;
+    max-width: 570px;
+    bottom: 35px;
   }
-  .tartalom
-  {
-    align-items: center;
+  .cardSzoveg{ 
+    height: 200px;
+    width: inherit;
+    border-radius: 12px;
+    padding: 10px;
   }
-  #webbot
+  .cardSzoveg:hover
   {
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+  
     
-    scrollbar-gutter: hidden;
+    color: #1A1A1A;
   }
-  .btn
-  {
-    left: 50px;
-  }
-  .bdy
-  {
-    margin: 0;
-  }
-}
 
-@media screen and (max-width: 450px) {
+  /* 3. oldal kártyái O_o*/
+  #MainCardProjects
+  {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2px;
+    justify-content:baseline ;
+    margin: 0 48px;
+    padding: 0;
+    margin-bottom: 120px;
+  }
+
+
+  #header
+  {
+    max-width: 850px;
+  }
+
   .Pcards
   {
+    width: 330px;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .Pcards p img
+  {
+    width: 20px;
+    position: relative;
+    top: 0.2rem;
+    margin-right: 10px;
+    filter: grayscale(100%) brightness(0) contrast(1000%);
+    transition: all .3s ease;
+  }
+  .Pcards p:last-child{
+    height: 10px;
+    margin-top: 20px;
+    line-height: 10px;
+  }
+  .Pcards:hover p:last-child{
+    color: blue;
+  }
+  .Pcards:hover p img{
+    filter: grayscale(0%) brightness(100%) contrast(100%);
+
+  }
+  .Pcards h3
+  {
+    margin-bottom: 10px;
+  }
+  .Pcards img:not(p img)
+  {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+  }
+  .Pcards a
+  {
+    text-decoration: none;
+    color: #1A1A1A;
+    text-shadow: none;
+  }
+
+  .Pcards:hover
+  {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1A1A1A;
+    border-radius: 15px;
+  }
+
+  /*Menu*/
+
+  #checkbox {
+    display: none;
+  }
+
+  .toggle {
+    position: static;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+    display: none;
+  }
+
+  .bars {
     width: 100%;
-    height: auto;
-    margin-bottom: auto;
-  }  
-}
+    height: 4px;
+    background-color: rgb(176, 92, 255);
+    border-radius: 4px;
+    visibility: hidden;
+    
+  }
 
-/*
-               ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-                    Ez mi ez
+  #bar2 {
+    transition-duration: .8s;
+  }
 
-Halvány fogalmam sincs mit csináltunk ez alatt a 3 hét alatt : )
-                      fasza
-*/
+  #bar1,#bar3 {
+    width: 70%;
+  }
+
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
+
+
+  #checkbox:checked ~ .fz{
+    display: block;
+    z-index: 100;
+  }
+
+
+
+
+
+
+
+  .fz {
+    display: none; 
+    position: absolute;
+    top: 70px; 
+    right: 10px;
+  float: right;
+    color: #1A1A1A;
+    padding: 10px;
+
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: rgb(0 0 0 / 15%) 0 10px 20px 0px;
+
+  }
+
+
+  .menu:checked + .fz {
+    display: block;
+    z-index: 100;
+
+  }
+  .menu:checked ~ body {
+    filter: blur(50000px);
+
+  }
+
+  .fz ul {
+    list-style-type: none;
+    padding: 0;
+    z-index: 100000;
+    border: 2px solid black;
+    background-color: #FAFAFA;
+  border-radius: 20px;
+  padding: 5px;
+  }
+  .fz a
+  {
+    color: #FAFAFA;
+    text-decoration: none;
+  }
+
+  .fz ul li {
+    padding: 10px;
+
+    z-index: 100000;
+    cursor: pointer;
+  }
+  .fz ul li:not(:last-child)
+  {
+    border-bottom: 1px solid #444;
+  }
+
+  .fz ul li:not(:first-child):hover {
+    background-color: #4D4D4D;
+  }
+  .fz ul li:first-child:hover {
+    background-color: #4D4D4D;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .fz ul li:last-child:hover {
+    background-color: #4D4D4D;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+
+  input[type="checkbox"]:checked {
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+    border: 1px solid #0974f1;  
+
+  }
+
+  input[type="checkbox"]:checked ~ .i {
+
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    color: black;
+
+    
+
+  }
+
+
+  input[type="checkbox"]:checked ~ .fz 
+  {
+    color: black;
+    box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
+  
+    border: 2px white solid;
+  }
+
+  input[type="checkbox"]:checked ~ .fz ul{
+    color: black;
+    background-color: #4D4D4D;
+  }
+
+
+
+  /* Gomb funkciók és minden más o_O alig van időőőőő*/
+
+  input[type="checkbox"]:not(:checked)~.fancyBG .bdy {
+    background-color: #E8E8E8;
+
+    .imga {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+      border: 2px black solid;
+    }
+
+  }
+
+  input[type="checkbox"]:not(:checked)~.fancyBG {
+    background-color: #D6D6D6;
+
+  }
+
+
+  /* Leghatso hatter */
+  input[type="checkbox"]:checked~.fancyBG {
+    background-color: black;
+
+
+  }
+
+  /* web hattere */
+
+  input[type="checkbox"]:checked~.fancyBG .bdy {
+
+    background: linear-gradient(to left, #1A1A1A, #232323, #2C2C2C, #363636, #404040);
+    border-left: 2px solid #A6A6A6;
+    border-right: 2px solid #A6A6A6;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    color: #FAFAFA;
+    color-scheme: light dark;
+
+    #MainCard{
+      border-left: white 1px solid;
+    }
+
+    .Pcards p, .Pcards h3
+    {
+      color: #FAFAFA;
+    } 
+    .Pcards p img
+    {
+      filter: grayscale(100%) brightness(1000%) contrast(0);
+      transition: all .3s ease;
+    }
+    .Pcards:hover p img{
+      filter: grayscale(0%) brightness(1) contrast(1);
+    
+    }
+
+    .X img {
+      filter: grayscale(100%) brightness(1000%) contrast(0);
+      transition: all .3s ease;
+    }
+
+    .imga {
+      box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
+      border: 2px white solid;
+    }
+
+    a {
+      color: #FAFAFA;
+    }
+
+    a:hover {
+      color: rgba(9, 117, 241, 0.8);
+      text-shadow: 10px 0 20px rgba(9, 117, 241, 0.8);
+    }
+
+    .cards a:hover {
+      text-shadow: none;
+      color: inherit;
+
+    }
+
+    #webbot p {
+
+      color: white;
+    }
+
+    #webbot {
+      border-top: 1px solid whitesmoke;
+    }
+
+    #menu ul {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+      border: 2px solid #1A1A1A;
+      background-color: #333333;
+      border-radius: 20px;
+      color: #FAFAFA;
+    }
+
+    .Pcards a
+  {
+    text-decoration: none;
+    color: #1A1A1A;
+    text-shadow: none;
+  }
+
+    
+  }
+
+
+
+
+  @media screen and (max-width:1740px){
+    #MainCard2 a
+    {
+      position: static;
+    }
+    .szovegcard
+    {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.1rem;
+    }
+    .szovegcard
+  {
+    border: none;
+  }
+  .cars
+  {
+    position: static;
+    height: min-content;
+    margin-bottom: 20px;
+  }
+  .carsSzoveg
+  {
+    height: max-content;
+    padding: 0;
+  }
+
+    #conferences
+  {
+  border-left: none;
+
+  }
+
+  #podcast
+  {
+    
+    border-left: none;
+  
+  }
+    #elerhet ul
+    {
+      position: static;
+      width:  max-content;
+    }
+    #menu
+    {
+      visibility: hidden;
+    }
+    #kep
+    {
+      margin: auto;
+    }
+    .toggle
+    {
+      display: flex;
+    }
+    .bars
+    {
+      visibility: visible;
+    }
+    .fz
+    {
+      right: 380px;
+    }
+    .i
+    {
+      visibility: visible;
+    }
+    #elerhet
+    {
+      width: 100%;
+    }
+    #elerhet ul
+    {
+      width: 100%;
+    }
+    #elerhet ul hr
+    {
+      width: 100%;
+    }
+    .tartalom
+    {
+      gap: 5rem;
+      width: 100%;
+    }
+
+    #szoveg h1
+    {
+      font-size:32pt;
+    }
+    #szoveg
+    {
+      max-width: fit-content;
+      max-height: fit-content;
+    }
+    #na
+    {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+    .btn
+    {
+      left: 400px;
+    }
+    .imga
+    {
+      float: none;
+    }
+    #webbot
+    {
+      flex-direction: column;
+      text-align: center;
+
+      width: 100%;
+      align-items: center;
+    }
+
+    #webbot p
+    {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cards
+    {
+      max-width: 340px;
+    }
+    .cards0
+    {
+      max-width: 340px;
+    }
+
+  }
+
+  @media screen and (max-width:1460px)
+  {
+    #MainCardProjects
+    {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width:1284px)
+  {
+  
+    .fz
+    {
+      right: 40px;
+    }
+  .i
+  {
+    left: 450px;
+  }
+    #rt:not(:last-child)
+    {
+      width: 420px;
+    } 
+    #conferences
+    {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      
+    
+      padding-top: 10px;
+      height: 620px;
+    
+    }
+
+    .cardSzoveg
+    {
+      padding-top: 0px;
+      height: auto;
+    }
+    #MainCard
+    {
+      border: none;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.1rem;
+    }
+    #MainCard p:first-child
+    {
+      border-left: 1px solid black;
+      padding-left: 30px;
+      position: static;
+      z-index: 20000;
+    }
+    #MainCard a
+    {
+      position: static;
+      
+    }
+    #MainCard
+    {
+      border-left: none !important;
+      align-items: center;
+    }
+    #MainCard .cards0
+    {
+      max-height: max-content ;
+    }
+    .cards 
+    {
+      height: 100%;
+    max-width: 340px;
+    
+      margin-top: 20px;
+    position: relative;
+    }
+    #MainCard p:first-child
+    { 
+      position: relative;
+      /*Kell a position-t változtatni staticról mert a Z-index nem müködik O_o*/
+      z-index: 20000;
+    }
+    .cards0
+    { 
+      
+      height: 100%;
+    max-width: 340px;
+    
+    margin-top: 20px;
+    position: static;
+    }
+    .cards0:not(:first-child)
+    {
+      margin-top: 10px;
+    }
+    .cardSzoveg0
+    {
+      height: 260px;
+      padding-top: 50px;
+      position: relative;
+      bottom: 30PX;
+      right: 10px;
+      
+    }
+
+    .cards:not(:first-child)
+    {
+      margin-top: 0;
+    }
+    .cardSzoveg
+    {
+      height: max-content;
+      padding-top: 10px;
+      position: static;
+      bottom: 25PX;
+      right: 10px;
+    }
+    .tartalom
+    {
+      align-items: center;
+    }
+    #webbot
+    {
+      width: 100%;
+      
+      scrollbar-gutter: hidden;
+    }
+    .btn
+    {
+      left: 50px;
+    }
+    .bdy
+    {
+      margin: 0;
+    }
+
+
+    #conferences .cards 
+    {
+      max-height: max-content;
+    
+    }
+    #podcast .cards 
+    {
+      max-height: max-content;
+    
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .Pcards
+    {
+      width: 100%;
+      height: auto;
+      margin-bottom: auto;
+    }  
+  }
+
+  /*
+                ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+                      Ez mi ez
+
+  Halvány fogalmam sincs mit csináltunk ez alatt a 3 hét alatt : )
+                        fasza
+  */
