@@ -7,7 +7,7 @@
       padding: 0;
       box-sizing: border-box;
 
-      
+
 
     }
 
@@ -22,15 +22,14 @@
     }
 
 
-    .bdy
-    {
+    .bdy {
       margin: 0 340px;
       background-color: gray;
       overflow: hidden;
 
     }
 
-    #menu{
+    #menu {
       margin-top: 10px;
       margin-left: auto;
       margin-right: auto;
@@ -44,28 +43,24 @@
 
     }
 
-    #menu ul
-    {
+    #menu ul {
       list-style-type: none;
       display: inline-flex;
 
-      
+
     }
 
-    #menu li
-    {
+    #menu li {
       padding-left: 10px;
       padding-right: 10px;
     }
 
-    #menu li:first-child
-    {
+    #menu li:first-child {
       padding-left: 20px;
-      
+
     }
 
-    #menu li:last-child
-    {
+    #menu li:last-child {
       padding-right: 20px;
     }
 
@@ -82,493 +77,245 @@
       color: black;
     }
 
+    /*Menu*/
+
+    #checkbox {
+      display: none;
+    }
+
+    .toggle {
+      position: static;
+      float: right;
+      margin-right: 50px;
+      margin-top: 10px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition-duration: .5s;
+      display: none;
+    }
+
+    .bars {
+      width: 100%;
+      height: 4px;
+      background-color: rgb(176, 92, 255);
+      border-radius: 4px;
+      visibility: hidden;
+
+    }
+
+    #bar2 {
+      transition-duration: .8s;
+    }
+
+    #bar1,
+    #bar3 {
+      width: 70%;
+    }
+
+    #checkbox:checked+.toggle .bars {
+      position: absolute;
+      transition-duration: .5s;
+    }
+
+    #checkbox:checked+.toggle #bar2 {
+      transform: scaleX(0);
+      transition-duration: .5s;
+    }
+
+    #checkbox:checked+.toggle #bar1 {
+      width: 100%;
+      transform: rotate(45deg);
+      transition-duration: .5s;
+    }
+
+    #checkbox:checked+.toggle #bar3 {
+      width: 100%;
+      transform: rotate(-45deg);
+      transition-duration: .5s;
+    }
+
+    #checkbox:checked+.toggle {
+      transition-duration: .5s;
+      transform: rotate(180deg);
+    }
+
+
+    #checkbox:checked~.fz {
+      display: block;
+      z-index: 100;
+    }
+
+
+
+
+
+
+
+    .fz {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      float: right;
+      color: #1A1A1A;
+      padding: 10px;
+      border-radius: 20px;
+      width: 200px;
+      box-shadow: rgb(0 0 0 / 15%) 0 10px 20px 0px;
+
+    }
+
+
+    .menu:checked+.fz {
+      display: block;
+      z-index: 100;
+
+    }
+
+    .menu:checked~body {
+      filter: blur(50000px);
+
+    }
+
+    .fz ul {
+      list-style-type: none;
+      padding: 0;
+      z-index: 100000;
+      border: 2px solid black;
+      background-color: #FAFAFA;
+      border-radius: 20px;
+      padding: 5px;
+    }
+
+    .fz a {
+      color: #FAFAFA;
+      text-decoration: none;
+    }
+
+    .fz ul li {
+      padding: 10px;
+
+      z-index: 100000;
+      cursor: pointer;
+    }
+
+    .fz ul li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+
+    .fz ul li:not(:first-child):hover {
+      background-color: #4D4D4D;
+    }
+
+    .fz ul li:first-child:hover {
+      background-color: #4D4D4D;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .fz ul li:last-child:hover {
+      background-color: #4D4D4D;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+
+    input[type="checkbox"]:checked {
+      box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+      border: 1px solid #0974f1;
+
+    }
+
+    input[type="checkbox"]:checked~.i {
+
+      border: 2px solid white;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+      color: black;
+
+
+
+    }
+
+
+    input[type="checkbox"]:checked~.fz {
+      color: black;
+      box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
+
+      border: 2px white solid;
+    }
+
+    input[type="checkbox"]:checked~.fz ul {
+      color: black;
+      background-color: #4D4D4D;
+    }
+
+
+
+
     /* Gta6 Loading Screen pp */
 
-    #pp  img
-    {
+    #pp img {
       position: absolute;
       top: 20px;
-      left:  500px;
+      left: 500px;
       width: 70px;
-    height: 70px;
+      height: 70px;
       padding: 5px;
       border-radius: 100px;
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    #pp a
-    {
-      width: 100px;
-      padding: 10px;
-    }
-    /*Uccso oldal*/
-
-    #headerul
-    {
-      list-style-type: none;
-      display: inline-flex;
-      gap: 6px;
-    }
-    #headerul a:hover img
-    {
-      filter: grayscale(0) brightness(100%) contrast(1);
-    }
-
-    #header2>*:not(:first-child) 
-    {
-      margin-top: 24px;
-      
-      
-    }
-    #header2 >*
-    {
-      width: 600px;
-    }
-
-    #ppa  img
-    {
-      position: absolute;
-      top: 90px;
-      left: 420px; 
-    
-      width: 80px;
-      height: 80px;
-      padding: 5px;
-      border-radius: 100px;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    #ppa a
-    {
+    #pp a {
       width: 100px;
       padding: 10px;
     }
 
- 
-    #pfpimgas
-    {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      position: absolute;
-      top: 450px;
-      align-self: center;
-      width: max-content;
-      overflow: unset;
-      z-index: 1000 !important;
-      gap: 2.5rem;
-      transform: translateZ(1000);
-      
-      }
 
-  
-    #pfpimgas img
-    {
-   
-    
-      aspect-ratio: 9/10;
-      width: 288px;
-      
-    }
-
-    .jobbrapfp 
-    {
-      rotate: 2deg;
-      border-radius: 20px;
-    }
-    .balpfp 
-    {
-      rotate: -2deg; 
-      border-radius: 20px;
-    }
-
-    .input-group {
-      position: relative;
-     }
-     
-     .input {
-      border: solid 1.5px #9e9e9e;
-      border-radius: 1rem;
-      background: none;
-      padding: 1rem;
-      font-size: 1rem;
-      color: #f5f5f5;
-      transition: border 150ms cubic-bezier(0.4,0,0.2,1);
-     }
-     
-     .user-label {
-      position: absolute;
-      left: 15px;
-      color:  #1A1A1A;
-      pointer-events: none;
-      transform: translateY(1rem);
-      transition: 150ms cubic-bezier(0.4,0,0.2,1);
-     }
-     
-     .input:focus, input:valid {
-      outline: none;
-      border: 1.5px solid #1a73e8;
-     }
-     
-     .input:focus ~ label:not(.no), input:valid ~ label:not(.no) {
-      transform: translateY(-50%) scale(0.8);
-      background-color: #212121;
-      padding: 0 .2em;
-      color: #2196f3;
-     }
-
-
-
-      #pfpBot
-      {
-        width: 512px;
-        padding: 0 0 0 64px;
-      }
-
-      #pfpBot >*
-      {
-        padding: 24px;
-        border: 1px solid #1A1A1A;
-        border-radius: 20px;
-        max-width: 100% ;
-      }
-
-      #pfpBot >*:not(:first-child)
-      {
-        margin-top: 40px;
-      }
-
-      .pfpBot > *
-      {
-        max-width: 100% !important;
-      }
-    
-
-      #pfpBot h4 img
-      {
-      object-fit: contain;
-      width: 20px;
-      height: 20px;
-      filter: grayscale(100%) brightness(0) contrast(1000%);
-      position: relative;
-      top: 5px;
-      margin-right: 10px;
-      }
-      .pfpBot li
-      {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        height: fit-content;
-      }
-      .pfpBot li:not(:first-child)
-      {
-        margin-top: 16px;
-      }
-      .pfpBot h4
-      {
-        max-width: 100% !important;
-      }
-      .pfpUh
-      {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        flex: auto;
-        gap: .5rem;
-      }
-      .pfpUh>*
-      {
-        max-height: min-content ;
-      }
-      .pfpUh>*:last-child
-      {
-        margin-left: auto;
-        color: #808080;
-      }
-      .pfpUh h4
-      {
-        
-        width: 100%;
-      }
-      .pfpBot ul
-      {
-        margin-top: 24px;
-      }
-
-      .pfpBot li img
-      {
-       
-          width: 60px;
-          height: 60px;
-          border-radius: 100px;
-          background-color: rgba(255, 255, 255, 0.2);
-          padding: 10px;
-        }
-      
-        .btn69 {
-          color: purple;
-          text-transform: uppercase;
-          text-decoration: none;
-          border: 2px solid purple;
-          border-radius: .375rem;
-          padding: 10px 20px;
-          margin-top: 15px;
-          font-size: 17px;
-          cursor: pointer;
-          font-weight: bold;
-          background: transparent;
-          position: relative;
-          transition: all 1s;
-          overflow: hidden;
-          width: 100%;
-        }
-        
-        .btn69:hover {
-          color: white;
-        }
-        
-        .btn69::before {
-          content: "";
-          position: absolute;
-          height: 100%;
-          width: 0%;
-          top: 0;
-          left: -40px;
-          transform: skewX(45deg);
-          background-color: purple;
-          z-index: -1;
-          transition: all 1s;
-        }
-        
-        .btn69:hover::before {
-          width: 160%;
-        }
-
-        #SUPERDIV
-        {
-          margin-top: 400px;
-          display: flex;
-          flex-direction: row;
-          margin-bottom: 100px;
-        }
-
-        #pfpBot form
-        {
-          margin-top: 24px;
-          display: flex;
-          flex-direction: row;
-          gap: 1rem;
-        }
-
-        #gecc
-        {
-          margin-top: 8px;
-        }
-        
 
     /*Just cars*/
 
-    .cars
-    {
+    .cars {
       padding-top: 10px;
       text-align: start;
       max-height: auto;
       max-width: 100%;
       user-select: none;
-      
+
       text-decoration: none;
-    
+
     }
 
 
 
-    .szovegcard
-    {
-      border-left: 2px solid #1A1A1A; 
+    .szovegcard {
+      border-left: 2px solid #1A1A1A;
       padding: 0 24px;
       width: fit-content;
     }
-    .carsSzoveg
-    {
-      
-        height: auto;
-        width: fit-content;
-        border-radius: 12px;
-        padding: 10px;
+
+    .carsSzoveg {
+
+      height: auto;
+      width: fit-content;
+      border-radius: 12px;
+      padding: 10px;
     }
 
-    /* From Uiverse.io by devanshsatwara */ 
-.ui-btn {
-  --btn-default-bg: #010314;
-  --btn-padding: 15px 20px;
-  --btn-hover-bg: rgb(51, 51, 51);
-  --btn-transition: .3s;
-  --btn-letter-spacing: .1rem;
-  --btn-animation-duration: 1.2s;
-  --btn-shadow-color: rgba(0, 0, 0, 0.137);
-  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-  --hover-btn-color: #7241FF;
-  --default-btn-color: #fff;
-  --font-size: 16px;
-  /* 👆 this field should not be empty */
-  --font-weight: 600;
-  --font-family: Menlo,Roboto Mono,monospace;
-}
 
-/* button settings 👆 */
 
-.ui-btn {
-  box-sizing: border-box;
-  padding: var(--btn-padding);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--default-btn-color);
-  font: var(--font-weight) var(--font-size) var(--font-family);
-  background: var(--btn-default-bg);
-  cursor: pointer;
-  transition: var(--btn-transition);
-  overflow: hidden;
-  box-shadow: var(--btn-shadow);
-  border-radius: 10px;
-  border: 2px solid #2A2B3A;
-}
-
-.ui-btn span {
-  letter-spacing: var(--btn-letter-spacing);
-  transition: var(--btn-transition);
-  box-sizing: border-box;
-  position: relative;
-  background: inherit;
-}
-
-.ui-btn span::before {
-  box-sizing: border-box;
-  position: absolute;
-  content: "";
-  background: inherit;
-}
-
-.ui-btn:hover, .ui-btn:focus {
-  background: var(--btn-default-bg);
-  box-shadow: 0px 0px 10px 0px rgba(119, 68, 255, 0.70);
-  border: 2px solid #7241FF;
-  ;
-}
-
-.ui-btn:hover span, .ui-btn:focus span {
-  color: var(--hover-btn-color);
-}
-
-.ui-btn:hover span::before, .ui-btn:focus span::before {
-  animation: chitchat linear both var(--btn-animation-duration);
-}
-
-@keyframes chitchat {
-  0% {
-    content: "#";
-  }
-
-  5% {
-    content: ".";
-  }
-
-  10% {
-    content: "^{";
-  }
-
-  15% {
-    content: "-!";
-  }
-
-  20% {
-    content: "#$_";
-  }
-
-  25% {
-    content: "№:0";
-  }
-
-  30% {
-    content: "#{+.";
-  }
-
-  35% {
-    content: "@}-?";
-  }
-
-  40% {
-    content: "?{4@%";
-  }
-
-  45% {
-    content: "=.,^!";
-  }
-
-  50% {
-    content: "?2@%";
-  }
-
-  55% {
-    content: "\;1}]";
-  }
-
-  60% {
-    content: "?{%:%";
-    right: 0;
-  }
-
-  65% {
-    content: "|{f[4";
-    right: 0;
-  }
-
-  70% {
-    content: "{4%0%";
-    right: 0;
-  }
-
-  75% {
-    content: "'1_0<";
-    right: 0;
-  }
-
-  80% {
-    content: "{0%";
-    right: 0;
-  }
-
-  85% {
-    content: "]>'";
-    right: 0;
-  }
-
-  90% {
-    content: "4";
-    right: 0;
-  }
-
-  95% {
-    content: "2";
-    right: 0;
-  }
-
-  100% {
-    content: "";
-    right: 0;
-  }
-}
-
-    
-    
-    .cars
-    {
+    .cars {
       position: relative;
       left: 230px;
       max-width: 720px;
       bottom: 35px;
     }
+
     /* menu alatt hiih*/
 
     .imga {
@@ -582,24 +329,23 @@
     }
 
 
-    .tartalom>*:not(:last-child), .tartalom>*:not(#pfpimgas) {
+    .tartalom>*:not(:last-child),
+    .tartalom>*:not(#pfpimgas) {
       padding: 0 64px;
     }
 
-    .tartalom
-    {
+    .tartalom {
       padding-top: 120px;
       display: flex;
       flex-direction: column;
       gap: 12px;
       height: auto;
-      
+
     }
 
 
 
-    #szoveg
-    {
+    #szoveg {
       height: 1000px;
       flex: 1;
       width: 520px;
@@ -617,21 +363,21 @@
       font-family: sajatp;
       font-size: 16px;
       line-height: 25px;
-    
+
     }
-    #test
-    {
+
+    #test {
       margin-top: 24px;
     }
+
     #test p:not(:first-child) {
 
       margin-top: 28px;
     }
 
     /*Maincard2.0 öccse kész vagyok */
-    #MainCard2
-    {
-      
+    #MainCard2 {
+
       display: flex;
       flex-direction: column;
       grid-column: 4rem;
@@ -642,47 +388,40 @@
 
     }
 
-    #MainCard2 a
-    {
+    #MainCard2 a {
       height: auto;
     }
 
-    #conferences
-    {
-    border-left: 2px solid #1A1A1A;
-    padding-left: 24px;
+    #conferences {
+      border-left: 2px solid #1A1A1A;
+      padding-left: 24px;
     }
 
-    #podcast
-    {
-      height: 1200px;
+    #podcast {
+      height: auto;
       margin-top: 64px;
       border-left: 2px solid #1A1A1A;
       padding-left: 24px;
     }
 
-    .sysconf 
-    {
-    color: #808080;
-    border-left: 4px solid #A6A6A6;
-    padding-left: 12px;
-    margin-bottom: 10px;
+    .sysconf {
+      color: #808080;
+      border-left: 4px solid #A6A6A6;
+      padding-left: 12px;
+      margin-bottom: 10px;
     }
 
-    .listen 
-    {
-    color: #A6A6A6;
-    font-weight: bold;
-    margin-top: 20px;
+    .listen {
+      color: #A6A6A6;
+      font-weight: bold;
+      margin-top: 20px;
     }
 
-    .tavolitsztqv
-    {
+    .tavolitsztqv {
       margin-bottom: 5px;
     }
 
-    #MainCard2 a
-    {
+    #MainCard2 a {
       position: relative;
       left: 230px;
       max-width: 570px;
@@ -699,7 +438,7 @@
     }
 
     #elerhet ul {
-      
+
 
       list-style-type: none;
       width: max-content;
@@ -768,7 +507,7 @@
       list-style-type: none;
       display: inline-flex;
 
-      
+
       flex-wrap: wrap;
       flex-direction: row;
       gap: 1.5rem;
@@ -841,24 +580,23 @@
     O_o*/
 
 
-    #rt
-    {
+    #rt {
       margin-left: 48px;
       margin-right: 48px;
       width: auto;
+
     }
-    #rt:not(:last-child)
-    {
+
+    #rt:not(:last-child) {
       width: auto;
-    } 
-    #artp
-    {
+    }
+
+    #artp {
       margin-top: 24px;
     }
 
-    #MainCard
-    {
-    
+    #MainCard {
+
       display: flex;
       flex-direction: column;
       grid-column: 4rem;
@@ -876,16 +614,15 @@
       color: inherit;
 
     }
-    .cards0:not(:first-child)
-    {
+
+    .cards0:not(:first-child) {
       margin-top: 64px;
     }
 
-    .cards0 p:not(.cardSzoveg p)
-    {
+    .cards0 p:not(.cardSzoveg p) {
       margin-top: 10px;
       width: fit-content;
-      
+
     }
 
     .cards0 {
@@ -897,18 +634,19 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .cardSzoveg0{ 
+
+    .cardSzoveg0 {
       height: 200px;
       width: inherit;
       border-radius: 12px;
       padding: 10px;
 
     }
-    .cardSzoveg0:hover
-    {
+
+    .cardSzoveg0:hover {
       background-color: rgba(255, 255, 255, 0.5);
-    
-      
+
+
       color: #1A1A1A;
     }
 
@@ -920,13 +658,12 @@
       color: inherit;
 
     }
-    .cards:not(:first-child)
-    {
+
+    .cards:not(:first-child) {
       margin-top: 64px;
     }
 
-    .cards p:not(.cardSzoveg p)
-    {
+    .cards p:not(.cardSzoveg p) {
       margin-top: 10px;
       width: fit-content;
     }
@@ -942,56 +679,57 @@
     }
 
 
-    #MainCard a
-    {
+    #MainCard a {
       position: relative;
       left: 230px;
       max-width: 570px;
       bottom: 35px;
     }
-    .cardSzoveg{ 
+
+    .cardSzoveg {
       height: 200px;
       width: inherit;
       border-radius: 12px;
       padding: 10px;
     }
-    .cardSzoveg:hover
-    {
+
+    .cardSzoveg:hover {
       background-color: rgba(1, 79, 180, 0.5);
-    
-      
+
+
       color: #1A1A1A !important;
     }
 
+
+
+
+
+
     /* 3. oldal kártyái O_o*/
-    #MainCardProjects
-    {
+    #MainCardProjects {
 
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       gap: 2px;
-      justify-content:baseline ;
+      justify-content: baseline;
       margin: 0 48px;
       padding: 0;
       margin-bottom: 120px;
     }
 
 
-    #header
-    {
+    #header {
       max-width: 850px;
     }
 
-    .Pcards
-    {
+    .Pcards {
       width: 330px;
       height: 200px;
       padding: 20px;
     }
 
-    .Pcards p img
-    {
+    .Pcards p img {
       width: 20px;
       position: relative;
       top: 0.2rem;
@@ -999,219 +737,463 @@
       filter: grayscale(100%) brightness(0) contrast(1000%);
       transition: all .3s ease;
     }
-    .Pcards p:last-child{
+
+    .Pcards p:last-child {
       height: 10px;
       margin-top: 20px;
       line-height: 10px;
     }
-    .Pcards:hover p:last-child{
+
+    .Pcards:hover p:last-child {
       color: blue;
     }
-    .Pcards:hover p img{
+
+    .Pcards:hover p img {
       filter: grayscale(0%) brightness(100%) contrast(100%);
 
     }
-    .Pcards h3
-    {
+
+    .Pcards h3 {
       margin-bottom: 10px;
     }
-    .Pcards img:not(p img)
-    {
+
+    .Pcards img:not(p img) {
       width: 60px;
       height: 60px;
       border-radius: 100px;
       background-color: rgba(255, 255, 255, 0.2);
       padding: 10px;
     }
-    .Pcards a
-    {
+
+    .Pcards a {
       text-decoration: none;
       color: #1A1A1A;
       text-shadow: none;
     }
 
-    .Pcards:hover
-    {
+    .Pcards:hover {
       background-color: rgba(255, 255, 255, 0.5);
       color: #1A1A1A;
       border-radius: 15px;
     }
 
-    /*Menu*/
 
-    #checkbox {
-      display: none;
+
+    /*Uccso oldal*/
+
+    #headerul {
+      list-style-type: none;
+      display: inline-flex;
+      gap: 6px;
     }
 
-    .toggle {
-      position: static;
-      float: right;
-      margin-right: 50px;
-      margin-top: 10px;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
+    #headerul a:hover img {
+      filter: grayscale(0) brightness(100%) contrast(1);
+    }
+
+    #header2>*:not(:first-child) {
+      margin-top: 24px;
+
+
+    }
+
+    #header2>* {
+      width: 600px;
+    }
+
+    #ppa img {
+      position: absolute;
+      top: 90px;
+      left: 420px;
+
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      border-radius: 100px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #ppa a {
+      width: 100px;
+      padding: 10px;
+    }
+
+
+    #pfpimgas {
       display: flex;
-      flex-direction: column;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: absolute;
+      top: 450px;
+      align-self: center;
+      width: max-content;
+      overflow: unset;
+      z-index: 1000 !important;
+      gap: 2.5rem;
+      transform: translateZ(1000);
+
+    }
+
+
+    #pfpimgas img {
+
+
+      aspect-ratio: 9/10;
+      width: 288px;
+
+    }
+
+    .jobbrapfp {
+      rotate: 2deg;
+      border-radius: 20px;
+    }
+
+    .balpfp {
+      rotate: -2deg;
+      border-radius: 20px;
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input {
+      border: solid 1.5px #9e9e9e;
+      border-radius: 1rem;
+      background: none;
+      padding: 1rem;
+      font-size: 1rem;
+      color: #f5f5f5;
+      transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .user-label {
+      position: absolute;
+      left: 15px;
+      color: #1A1A1A;
+      pointer-events: none;
+      transform: translateY(1rem);
+      transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .input:focus,
+    input:valid {
+      outline: none;
+      border: 1.5px solid #1a73e8;
+    }
+
+    .input:focus~label:not(.no),
+    input:valid~label:not(.no) {
+      transform: translateY(-50%) scale(0.8);
+      background-color: #212121;
+      padding: 0 .2em;
+      color: #2196f3;
+    }
+
+
+
+    #pfpBot {
+      width: 512px;
+      padding: 0 0 0 64px;
+    }
+
+    #pfpBot>* {
+      padding: 24px;
+      border: 1px solid #1A1A1A;
+      border-radius: 20px;
+      max-width: 100%;
+    }
+
+    #pfpBot>*:not(:first-child) {
+      margin-top: 40px;
+    }
+
+    .pfpBot>* {
+      max-width: 100% !important;
+    }
+
+
+    #pfpBot h4 img {
+      object-fit: contain;
+      width: 20px;
+      height: 20px;
+      filter: grayscale(100%) brightness(0) contrast(1000%);
+      position: relative;
+      top: 5px;
+      margin-right: 10px;
+    }
+
+    .pfpBot li {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      height: fit-content;
+    }
+
+    .pfpBot li:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    .pfpBot h4 {
+      max-width: 100% !important;
+    }
+
+    .pfpUh {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      flex: auto;
+      gap: .5rem;
+    }
+
+    .pfpUh>* {
+      max-height: min-content;
+    }
+
+    .pfpUh>*:last-child {
+      margin-left: auto;
+      color: #808080;
+    }
+
+    .pfpUh h4 {
+
+      width: 100%;
+    }
+
+    .pfpBot ul {
+      margin-top: 24px;
+    }
+
+    .pfpBot li img {
+
+      width: 60px;
+      height: 60px;
+      border-radius: 100px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+    }
+
+    .btn69 {
+      color: purple;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid purple;
+      border-radius: .375rem;
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 17px;
+      cursor: pointer;
+      font-weight: bold;
+      background: transparent;
+      position: relative;
+      transition: all 1s;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .btn69:hover {
+      color: white;
+    }
+
+    .btn69::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      top: 0;
+      left: -40px;
+      transform: skewX(45deg);
+      background-color: purple;
+      z-index: -1;
+      transition: all 1s;
+    }
+
+    .btn69:hover::before {
+      width: 160%;
+    }
+
+    #SUPERDIV {
+      margin-top: 400px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 100px;
+    }
+
+    #pfpBot form {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    #gecc {
+      margin-top: 8px;
+    }
+
+    /* From Uiverse.io by devanshsatwara */
+    .ui-btn {
+      /* ezek többnyire csak változok -_- */
+      --btn-default-bg: #010314;
+      --btn-padding: 15px 20px;
+      --btn-hover-bg: rgb(51, 51, 51);
+      --btn-transition: .3s;
+      --btn-letter-spacing: .1rem;
+      --btn-animation-duration: 1.2s;
+      --btn-shadow-color: rgba(0, 0, 0, 0.137);
+      --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+      --hover-btn-color: #7241FF;
+      --default-btn-color: #fff;
+      --font-size: 16px;
+      /* 👆 this field should not be empty */
+      --font-weight: 600;
+      --font-family: Menlo, Roboto Mono, monospace;
+    }
+
+    /* button settings 👆 */
+
+    .ui-btn {
+      box-sizing: border-box;
+      padding: var(--btn-padding);
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      transition-duration: .5s;
-      display: none;
-    }
-
-    .bars {
-      width: 100%;
-      height: 4px;
-      background-color: rgb(176, 92, 255);
-      border-radius: 4px;
-      visibility: hidden;
-      
-    }
-
-    #bar2 {
-      transition-duration: .8s;
-    }
-
-    #bar1,#bar3 {
-      width: 70%;
-    }
-
-    #checkbox:checked + .toggle .bars {
-      position: absolute;
-      transition-duration: .5s;
-    }
-
-    #checkbox:checked + .toggle #bar2 {
-      transform: scaleX(0);
-      transition-duration: .5s;
-    }
-
-    #checkbox:checked + .toggle #bar1 {
-      width: 100%;
-      transform: rotate(45deg);
-      transition-duration: .5s;
-    }
-
-    #checkbox:checked + .toggle #bar3 {
-      width: 100%;
-      transform: rotate(-45deg);
-      transition-duration: .5s;
-    }
-
-    #checkbox:checked + .toggle {
-      transition-duration: .5s;
-      transform: rotate(180deg);
-    }
-
-
-    #checkbox:checked ~ .fz{
-      display: block;
-      z-index: 100;
-    }
-
-
-
-
-
-
-
-    .fz {
-      display: none; 
-      position: absolute;
-      top: 70px; 
-      right: 10px;
-    float: right;
-      color: #1A1A1A;
-      padding: 10px;
-
-      border-radius: 20px;
-      width: 200px;
-      box-shadow: rgb(0 0 0 / 15%) 0 10px 20px 0px;
-
-    }
-
-
-    .menu:checked + .fz {
-      display: block;
-      z-index: 100;
-
-    }
-    .menu:checked ~ body {
-      filter: blur(50000px);
-
-    }
-
-    .fz ul {
-      list-style-type: none;
-      padding: 0;
-      z-index: 100000;
-      border: 2px solid black;
-      background-color: #FAFAFA;
-    border-radius: 20px;
-    padding: 5px;
-    }
-    .fz a
-    {
-      color: #FAFAFA;
-      text-decoration: none;
-    }
-
-    .fz ul li {
-      padding: 10px;
-
-      z-index: 100000;
+      color: var(--default-btn-color);
+      font: var(--font-weight) var(--font-size) var(--font-family);
+      background: var(--btn-default-bg);
       cursor: pointer;
-    }
-    .fz ul li:not(:last-child)
-    {
-      border-bottom: 1px solid #444;
-    }
-
-    .fz ul li:not(:first-child):hover {
-      background-color: #4D4D4D;
-    }
-    .fz ul li:first-child:hover {
-      background-color: #4D4D4D;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      transition: var(--btn-transition);
+      overflow: hidden;
+      box-shadow: var(--btn-shadow);
+      border-radius: 10px;
+      border: 2px solid #2A2B3A;
     }
 
-    .fz ul li:last-child:hover {
-      background-color: #4D4D4D;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+    .ui-btn span {
+      letter-spacing: var(--btn-letter-spacing);
+      transition: var(--btn-transition);
+      box-sizing: border-box;
+      position: relative;
+      background: inherit;
     }
 
-
-    input[type="checkbox"]:checked {
-      box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
-      border: 1px solid #0974f1;  
-
+    .ui-btn span::before {
+      box-sizing: border-box;
+      position: absolute;
+      content: "";
+      background: inherit;
     }
 
-    input[type="checkbox"]:checked ~ .i {
-
-      border: 2px solid white;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-      color: black;
-
-      
-
+    .ui-btn:hover,
+    .ui-btn:focus {
+      background: var(--btn-default-bg);
+      box-shadow: 0px 0px 10px 0px rgba(119, 68, 255, 0.70);
+      border: 2px solid #7241FF;
+      ;
     }
 
-
-    input[type="checkbox"]:checked ~ .fz 
-    {
-      color: black;
-      box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.8);
-    
-      border: 2px white solid;
+    .ui-btn:hover span,
+    .ui-btn:focus span {
+      color: var(--hover-btn-color);
     }
 
-    input[type="checkbox"]:checked ~ .fz ul{
-      color: black;
-      background-color: #4D4D4D;
+    .ui-btn:hover span::before,
+    .ui-btn:focus span::before {
+      animation: chitchat linear both var(--btn-animation-duration);
+    }
+
+    @keyframes chitchat {
+      0% {
+        content: "#";
+      }
+
+      5% {
+        content: ".";
+      }
+
+      10% {
+        content: "^{";
+      }
+
+      15% {
+        content: "-!";
+      }
+
+      20% {
+        content: "#$_";
+      }
+
+      25% {
+        content: "№:0";
+      }
+
+      30% {
+        content: "#{+.";
+      }
+
+      35% {
+        content: "@}-?";
+      }
+
+      40% {
+        content: "?{4@%";
+      }
+
+      45% {
+        content: "=.,^!";
+      }
+
+      50% {
+        content: "?2@%";
+      }
+
+      55% {
+        content: "\;1}]";
+      }
+
+      60% {
+        content: "?{%:%";
+        right: 0;
+      }
+
+      65% {
+        content: "|{f[4";
+        right: 0;
+      }
+
+      70% {
+        content: "{4%0%";
+        right: 0;
+      }
+
+      75% {
+        content: "'1_0<";
+        right: 0;
+      }
+
+      80% {
+        content: "{0%";
+        right: 0;
+      }
+
+      85% {
+        content: "]>'";
+        right: 0;
+      }
+
+      90% {
+        content: "4";
+        right: 0;
+      }
+
+      95% {
+        content: "2";
+        right: 0;
+      }
+
+      100% {
+        content: "";
+        right: 0;
+      }
     }
 
 
@@ -1252,47 +1234,45 @@
       color: #FAFAFA;
       color-scheme: light dark;
 
-      #pfpBot h4 img
-      {
-    
-      filter: grayscale(100%) brightness(10000%) contrast(0);
-     
+      #pfpBot h4 img {
+
+        filter: grayscale(100%) brightness(10000%) contrast(0);
+
       }
 
-      #pfpBot>*
-      {
+      #pfpBot>* {
         border: 1px solid #FAFAFA;
-        
+
       }
-      
-      #pfpimgas img
-      {
+
+      #pfpimgas img {
         border: white 1px solid;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-        
+
 
       }
-      .user-label
-      {
+
+      .user-label {
         color: #FAFAFA;
       }
 
-      #MainCard{
+      #MainCard {
         border-left: white 1px solid;
       }
 
-      .Pcards p, .Pcards h3
-      {
+      .Pcards p,
+      .Pcards h3 {
         color: #FAFAFA;
-      } 
-      .Pcards p img
-      {
+      }
+
+      .Pcards p img {
         filter: grayscale(100%) brightness(1000%) contrast(0);
         transition: all .3s ease;
       }
-      .Pcards:hover p img{
+
+      .Pcards:hover p img {
         filter: grayscale(0%) brightness(1) contrast(1);
-      
+
       }
 
       .X img {
@@ -1338,156 +1318,151 @@
         color: #FAFAFA;
       }
 
-      .Pcards a
-    {
-      text-decoration: none;
-      color: #1A1A1A;
-      text-shadow: none;
+      .Pcards a {
+        text-decoration: none;
+        color: #1A1A1A;
+        text-shadow: none;
+      }
+
+
     }
 
-      
-    }
 
 
 
+    @media screen and (max-width:1740px) {
 
-    @media screen and (max-width:1740px){
-      
-  
-    #pfpimgas img
-    {
-   
-    
-      aspect-ratio: 9/10;
-      width: 208px;
-      
-    }
-      #SUPERDIV
-      {
+
+      #pfpimgas img {
+
+
+        aspect-ratio: 9/10;
+        width: 208px;
+
+      }
+
+      #SUPERDIV {
         flex-direction: column;
         justify-content: center;
         gap: 5rem;
         margin-bottom: 0;
       }
-      #pfpcards >*
-      {
+
+      #pfpcards>* {
         max-width: 100%;
       }
-      #pfpBot
-      {
+
+      #pfpBot {
         padding: 0;
       }
-      #MainCard2 a
-      {
+
+      #MainCard2 a {
         position: static;
       }
-      .szovegcard
-      {
+
+      .szovegcard {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         gap: 0.1rem;
       }
-      .szovegcard
-    {
-      border: none;
-    }
-    .cars
-    {
-      position: static;
-      height: min-content;
-      margin-bottom: 20px;
-    }
-    .carsSzoveg
-    {
-      height: max-content;
-      padding: 0;
-    }
 
-      #conferences
-    {
-    border-left: none;
-
-    }
-
-    #podcast
-    {
-      
-      border-left: none;
-    
-    }
-      #elerhet ul
-      {
-        position: static;
-        width:  max-content;
+      .szovegcard {
+        border: none;
       }
-      #menu
-      {
+
+      .cars {
+        position: static;
+        height: min-content;
+        margin-bottom: 20px;
+      }
+
+      .carsSzoveg {
+        height: max-content;
+        padding: 0;
+      }
+
+      #conferences {
+        border-left: none;
+
+      }
+
+      #podcast {
+
+        border-left: none;
+
+      }
+
+      #elerhet ul {
+        position: static;
+        width: max-content;
+      }
+
+      #menu {
         visibility: hidden;
       }
-      #kep
-      {
+
+      #kep {
         margin: auto;
       }
-      .toggle
-      {
+
+      .toggle {
         display: flex;
       }
-      .bars
-      {
+
+      .bars {
         visibility: visible;
       }
-      .fz
-      {
+
+      .fz {
         right: 380px;
       }
-      .i
-      {
+
+      .i {
         visibility: visible;
       }
-      #elerhet
-      {
+
+      #elerhet {
         width: 100%;
       }
-      #elerhet ul
-      {
+
+      #elerhet ul {
         width: 100%;
       }
-      #elerhet ul hr
-      {
+
+      #elerhet ul hr {
         width: 100%;
       }
-      .tartalom
-      {
+
+      .tartalom {
         gap: 5rem;
         width: 100%;
       }
 
-      #szoveg h1
-      {
-        font-size:32pt;
+      #szoveg h1 {
+        font-size: 32pt;
       }
-      #szoveg
-      {
+
+      #szoveg {
         max-width: fit-content;
         max-height: fit-content;
       }
-      #na
-      {
+
+      #na {
         display: flex;
         flex-direction: column;
         gap: 5rem;
       }
-      .btn
-      {
+
+      .btn {
         left: 400px;
       }
-      .imga
-      {
+
+      .imga {
         float: none;
       }
-      #webbot
-      {
+
+      #webbot {
         flex-direction: column;
         text-align: center;
 
@@ -1495,85 +1470,78 @@
         align-items: center;
       }
 
-      #webbot p
-      {
+      #webbot p {
         float: none;
         margin-left: auto;
         margin-right: auto;
       }
-      .cards
-      {
+
+      .cards {
         max-width: 340px;
       }
-      .cards0
-      {
+
+      .cards0 {
         max-width: 340px;
       }
-      #SUPERDIV
-      {
+
+      #SUPERDIV {
         margin-top: 250px;
         align-items: center;
       }
 
     }
 
-    @media screen and (max-width:1460px)
-    {
-      #MainCardProjects
-      {
+    @media screen and (max-width:1460px) {
+      #MainCardProjects {
         justify-content: center;
         flex-direction: column;
       }
     }
 
-    @media screen and (max-width:1284px)
-    {
-      #SUPERDIV
-      {
+    @media screen and (max-width:1284px) {
+      #SUPERDIV {
         margin-top: 200px;
       }
 
-      #pfpimgas img
-    {
-   
-    
-      aspect-ratio: 9/10;
-      width: 178px;
-      
-    }
-      .fz
-      {
+      #pfpimgas img {
+
+
+        aspect-ratio: 9/10;
+        width: 178px;
+
+      }
+
+      .fz {
         right: 40px;
       }
-    .i
-    {
-      left: 450px;
-    }
-      #rt:not(:last-child)
-      {
+
+      .i {
+        left: 450px;
+      }
+
+      #rt:not(:last-child) {
         width: 420px;
-      } 
-      #conferences
-      {
+      }
+
+      #conferences {
         position: static;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.5rem;
-        
-      
+
+
         padding-top: 10px;
         height: 620px;
-      
+
       }
 
-      .cardSzoveg
-      {
+      .cardSzoveg {
         padding-top: 0px;
         height: auto;
       }
-      #MainCard
-      {
+
+      #MainCard {
         border: none;
         align-items: center;
         display: flex;
@@ -1581,142 +1549,136 @@
         flex-wrap: wrap;
         gap: 0.1rem;
       }
-      #MainCard p:first-child
-      {
+
+      #MainCard p:first-child {
         border-left: 1px solid black;
         padding-left: 30px;
         position: static;
         z-index: 20000;
       }
-      #MainCard a
-      {
+
+      #MainCard a {
         position: static;
-        
+
       }
-      #MainCard
-      {
+
+      #MainCard {
         border-left: none !important;
         align-items: center;
       }
-      #MainCard .cards0
-      {
-        max-height: max-content ;
+
+      #MainCard .cards0 {
+        max-height: max-content;
       }
-      .cards 
-      {
+
+      .cards {
         height: 100%;
-      max-width: 340px;
-      
+        max-width: 340px;
+
         margin-top: 20px;
-      position: relative;
+        position: relative;
       }
-      #MainCard p:first-child
-      { 
+
+      #MainCard p:first-child {
         position: relative;
         /*Kell a position-t változtatni staticról mert a Z-index nem müködik O_o*/
         z-index: 20000;
       }
-      .cards0
-      { 
-        
+
+      .cards0 {
+
         height: 100%;
-      max-width: 340px;
-      
-      margin-top: 20px;
-      position: static;
+        max-width: 340px;
+
+        margin-top: 20px;
+        position: static;
       }
-      .cards0:not(:first-child)
-      {
+
+      .cards0:not(:first-child) {
         margin-top: 10px;
       }
-      .cardSzoveg0
-      {
+
+      .cardSzoveg0 {
         height: 260px;
         padding-top: 50px;
         position: relative;
         bottom: 30PX;
         right: 10px;
-        
+
       }
 
-      .cards:not(:first-child)
-      {
+      .cards:not(:first-child) {
         margin-top: 0;
       }
-      .cardSzoveg
-      {
+
+      .cardSzoveg {
         height: max-content;
         padding-top: 10px;
         position: static;
         bottom: 25PX;
         right: 10px;
-        
+
       }
-      .tartalom
-      {
+
+      .tartalom {
         align-items: center;
       }
-      #webbot
-      {
+
+      #webbot {
         width: 100%;
-        
+
         scrollbar-gutter: hidden;
       }
-      .btn
-      {
+
+      .btn {
         left: 50px;
       }
-      .bdy
-      {
+
+      .bdy {
         margin: 0;
       }
 
 
-      #conferences .cards 
-      {
+      #conferences .cards {
         max-height: max-content;
-      
+
       }
-      #podcast .cards 
-      {
+
+      #podcast .cards {
         max-height: max-content;
-      
+
       }
     }
 
-    @media screen and (max-width: 1024px)
-    {
-      .bdy
-      {
+    @media screen and (max-width: 1024px) {
+      .bdy {
         max-width: 100% !important;
       }
 
-      #pfpimgas
-      {
+      #pfpimgas {
         padding: 0;
         gap: 1rem;
       }
-      
+
     }
 
     @media screen and (max-width: 450px) {
 
-     
 
-      .Pcards
-      {
+
+      .Pcards {
         width: 100%;
         height: auto;
         margin-bottom: auto;
       }
-      #pfpimgas img
-      {
-     
-      
+
+      #pfpimgas img {
+
+
         aspect-ratio: 9/10;
         width: 128px;
-        
-      } 
+
+      }
     }
 
     /*
